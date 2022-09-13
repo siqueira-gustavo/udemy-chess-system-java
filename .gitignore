@@ -31,3 +31,7 @@ replay_pid*
 
 # Eclipse
 .settings/
+
+# VS Code
+.vscode/
+/bin
