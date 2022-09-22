@@ -13,7 +13,7 @@ public abstract class ChessPiece extends Piece {
     super(board);
     this.color = color;
   }
-  
+
   public int getMoveCount() {
     return moveCount;
   }
@@ -23,11 +23,11 @@ public abstract class ChessPiece extends Piece {
   }
 
   public void increaseMoveCount() {
-    moveCount ++;
+    moveCount++;
   }
-  
+
   public void decreaseMoveCount() {
-    moveCount --;
+    moveCount--;
   }
 
   public ChessPosition getChessPosition() {
