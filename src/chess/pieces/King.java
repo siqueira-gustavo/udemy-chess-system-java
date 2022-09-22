@@ -17,7 +17,7 @@ public class King extends ChessPiece {
   }
 
   private boolean canMove(Position position) {
-    ChessPiece p = (ChessPiece)getBoard().piece(position);
+    ChessPiece p = (ChessPiece) getBoard().piece(position);
     return p == null || p.getColor() != getColor();
   }
 
@@ -28,44 +28,36 @@ public class King extends ChessPiece {
 
     // above
     p.setValues(position.getRow() - 1, position.getColumn());
-    if (getBoard().positionExists(p) && canMove(p))
-      mat[p.getRow()][p.getColumn()] = true;
+    if (getBoard().positionExists(p) && canMove(p)) mat[p.getRow()][p.getColumn()] = true;
 
     // below
     p.setValues(position.getRow() + 1, position.getColumn());
-    if (getBoard().positionExists(p) && canMove(p))
-      mat[p.getRow()][p.getColumn()] = true;
+    if (getBoard().positionExists(p) && canMove(p)) mat[p.getRow()][p.getColumn()] = true;
 
     // left
     p.setValues(position.getRow(), position.getColumn() - 1);
-    if (getBoard().positionExists(p) && canMove(p))
-      mat[p.getRow()][p.getColumn()] = true;
+    if (getBoard().positionExists(p) && canMove(p)) mat[p.getRow()][p.getColumn()] = true;
 
     // above
     p.setValues(position.getRow(), position.getColumn() + 1);
-    if (getBoard().positionExists(p) && canMove(p))
-      mat[p.getRow()][p.getColumn()] = true;
+    if (getBoard().positionExists(p) && canMove(p)) mat[p.getRow()][p.getColumn()] = true;
 
     // north-west
     p.setValues(position.getRow() - 1, position.getColumn() - 1);
-    if (getBoard().positionExists(p) && canMove(p))
-      mat[p.getRow()][p.getColumn()] = true;
+    if (getBoard().positionExists(p) && canMove(p)) mat[p.getRow()][p.getColumn()] = true;
 
     // north-east
     p.setValues(position.getRow() - 1, position.getColumn() + 1);
-    if (getBoard().positionExists(p) && canMove(p))
-      mat[p.getRow()][p.getColumn()] = true;
+    if (getBoard().positionExists(p) && canMove(p)) mat[p.getRow()][p.getColumn()] = true;
 
     // south-west
     p.setValues(position.getRow() + 1, position.getColumn() - 1);
-    if (getBoard().positionExists(p) && canMove(p))
-      mat[p.getRow()][p.getColumn()] = true;
+    if (getBoard().positionExists(p) && canMove(p)) mat[p.getRow()][p.getColumn()] = true;
 
     // south-east
     p.setValues(position.getRow() + 1, position.getColumn() + 1);
-    if (getBoard().positionExists(p) && canMove(p))
-      mat[p.getRow()][p.getColumn()] = true;
-    
+    if (getBoard().positionExists(p) && canMove(p)) mat[p.getRow()][p.getColumn()] = true;
+
     return mat;
   }
 }
