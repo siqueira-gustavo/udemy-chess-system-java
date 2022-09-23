@@ -4,6 +4,8 @@ import chess.ChessMatch;
 import chess.ChessPiece;
 import chess.ChessPosition;
 import chess.Color;
+
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.List;
@@ -101,6 +103,7 @@ public class UI {
   }
 
   private static void printCapturedPieces(List<ChessPiece> captured) {
+    captured = new ArrayList<ChessPiece>();
     List<ChessPiece> white =
         captured.stream().filter(x -> x.getColor() == Color.WHITE).collect(Collectors.toList());
     List<ChessPiece> black =
